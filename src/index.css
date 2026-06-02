@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "sans-serif";
+  --font-outfit: "Outfit", "sans-serif";
+}
+
+@layer base {
+  html {
+    cursor: none;
+  }
+  body, a, button {
+    cursor: none;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10;
+  }
+}
