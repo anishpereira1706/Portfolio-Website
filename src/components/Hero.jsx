@@ -31,14 +31,14 @@ const Hero = () => {
   }, [mouseX, mouseY]);
 
   return (
-    <section id="home" className="relative w-full min-h-screen flex items-center justify-center pt-24 overflow-hidden">
+    <section id="home" className="relative w-full min-h-screen flex items-center justify-center pt-32 pb-24 md:py-0 overflow-hidden">
       {/* Interactive Background gradient blob */}
       <motion.div 
         style={{ x: backgroundX, y: backgroundY }}
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-cyan-600/10 rounded-full blur-[120px] opacity-50 pointer-events-none z-0"
       ></motion.div>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-12 w-full z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-16 w-full z-10">
         
         {/* Text Content */}
         <motion.div 
@@ -84,13 +84,12 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        {/* Image / Graphic with Parallax */}
+        {/* Image / Graphic */}
         <motion.div 
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          style={{ x: imageX, y: imageY }}
-          className="flex-1 flex justify-center md:justify-end w-full max-w-md md:max-w-none relative"
+          className="flex-1 flex justify-center md:justify-end w-full max-w-md md:max-w-none relative mt-10 md:mt-0"
         >
           <motion.div 
             animate={{ y: [-10, 10, -10] }}
@@ -112,7 +111,7 @@ const Hero = () => {
               <img 
                 src="/anish.png" 
                 alt="Anish Larson Pereira" 
-                className="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700"
+                className="w-full h-full object-cover object-top opacity-90 transition-all duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/60 via-transparent to-transparent opacity-40 mix-blend-overlay"></div>
             </div>
