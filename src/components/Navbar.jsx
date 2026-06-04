@@ -37,9 +37,8 @@ const Navbar = () => {
     )}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          <a href="#" className="text-xl font-bold tracking-tight text-white flex items-center gap-2 group font-heading">
-            <span>anish</span>
-            <span className="w-2 h-2 rounded-full bg-cyan-500 shadow-[0_0_8px_rgba(34,211,238,0.8)] transition-transform duration-300 group-hover:scale-150"></span>
+          <a href="#" className="text-xl font-bold tracking-tight text-white flex items-center group font-heading">
+            <span>anish<span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">.</span></span>
           </a>
 
           {/* Desktop Nav */}

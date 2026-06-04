@@ -9,11 +9,13 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import CustomCursor from './components/CustomCursor'
 import SmoothScroll from './components/SmoothScroll'
+import ParticlesBackground from './components/ParticlesBackground'
 
 function App() {
   return (
     <SmoothScroll>
-      <div className="min-h-screen bg-zinc-950 text-zinc-50 selection:bg-cyan-500/30 selection:text-cyan-200">
+      <div className="min-h-screen text-zinc-50 selection:bg-cyan-500/30 selection:text-cyan-200 relative">
+        <ParticlesBackground />
         <CustomCursor />
         <Navbar />
       <main className="flex flex-col items-center w-full">

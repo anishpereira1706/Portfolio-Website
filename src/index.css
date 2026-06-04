@@ -12,6 +12,9 @@
   body, a, button {
     cursor: none;
   }
+  body {
+    @apply bg-zinc-950 text-zinc-50;
+  }
 }
 
 @layer utilities {

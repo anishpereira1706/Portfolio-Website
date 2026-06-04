@@ -52,10 +52,10 @@ const Hero = () => {
             Available for new opportunities
           </div>
           
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white font-heading leading-tight">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white font-heading leading-tight">
             Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Anish</span>.
             <br />
-            <span className="text-3xl sm:text-4xl lg:text-5xl text-zinc-300 font-semibold h-[40px] block mt-4">
+            <span className="text-2xl sm:text-4xl lg:text-5xl text-zinc-300 font-semibold h-[40px] block mt-4">
               <Typewriter
                 words={['Web Developer', 'AI/ML Enthusiast', 'Graphic Designer']}
                 loop={true}
@@ -94,7 +94,7 @@ const Hero = () => {
           <motion.div 
             animate={{ y: [-10, 10, -10] }}
             transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-            className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-[400px] lg:h-[400px] rounded-full p-[3px] group shadow-[0_0_40px_rgba(34,211,238,0.2)] flex-none"
+            className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[400px] lg:h-[400px] rounded-full p-[3px] group shadow-[0_0_40px_rgba(34,211,238,0.2)] flex-none"
           >
             {/* Spinning gradient border simulating particles */}
             <motion.div 
