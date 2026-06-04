@@ -52,7 +52,7 @@ const Hero = () => {
             Available for new opportunities
           </div>
           
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white font-outfit leading-tight">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white font-heading leading-tight">
             Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Anish</span>.
             <br />
             <span className="text-3xl sm:text-4xl lg:text-5xl text-zinc-300 font-semibold h-[40px] block mt-4">

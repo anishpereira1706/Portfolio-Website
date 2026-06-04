@@ -88,9 +88,9 @@ const CustomCursor = () => {
         transition={{ duration: 0.3 }}
       />
 
-      {/* Sharp, precise inner dot */}
+      {/* Precise inner ring instead of white dot */}
       <motion.div
-        className="absolute top-0 left-0 w-3 h-3 bg-white rounded-full shadow-[0_0_10px_rgba(255,255,255,0.8)]"
+        className="absolute top-0 left-0 w-5 h-5 border-[2px] border-cyan-400 rounded-full shadow-[0_0_10px_rgba(34,211,238,0.5)]"
         style={{
           x: dotX,
           y: dotY,
@@ -98,7 +98,7 @@ const CustomCursor = () => {
           translateY: "-50%"
         }}
         animate={{
-          scale: isHovering ? 0 : 1, // Dot disappears when hovering, leaving only the glowing smoke
+          scale: isHovering ? 1.5 : 1, // Ring expands and fades out on hover
           opacity: isHovering ? 0 : 1,
         }}
         transition={{ duration: 0.2 }}

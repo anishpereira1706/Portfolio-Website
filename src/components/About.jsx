@@ -13,7 +13,7 @@ const About = () => {
           className="space-y-10"
         >
           <div className="flex flex-col items-center text-center space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-white font-outfit">About Me</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white font-heading">About Me</h2>
             <div className="w-20 h-1 bg-cyan-500 rounded-full shadow-[0_0_10px_rgba(34,211,238,0.5)]"></div>
           </div>
           
@@ -31,7 +31,7 @@ const About = () => {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-8 mt-8 border-t border-white/5 relative z-20">
               <div>
-                <h3 className="text-white font-bold text-xl mb-6 font-outfit group-hover:text-cyan-400 transition-colors">Education</h3>
+                <h3 className="text-white font-bold text-xl mb-6 font-heading group-hover:text-cyan-400 transition-colors">Education</h3>
                 <ul className="space-y-6 text-sm">
                   <li className="flex flex-col bg-zinc-950/40 p-4 rounded-xl border border-white/5 group-hover:border-white/10 transition-colors">
                     <span className="text-cyan-400 font-semibold text-base mb-1">MCA <span className="text-zinc-500 font-normal text-sm ml-1">(2023-2025)</span></span>
@@ -46,7 +46,7 @@ const About = () => {
                 </ul>
               </div>
               <div>
-                <h3 className="text-white font-bold text-xl mb-6 font-outfit group-hover:text-cyan-400 transition-colors">Certifications</h3>
+                <h3 className="text-white font-bold text-xl mb-6 font-heading group-hover:text-cyan-400 transition-colors">Certifications</h3>
                 <ul className="space-y-3 text-sm text-zinc-400">
                   <li className="flex items-start gap-3 bg-zinc-950/40 p-4 rounded-xl border border-white/5 group-hover:border-white/10 transition-colors">
                     <div className="w-2 h-2 rounded-full bg-cyan-500 mt-1.5 shrink-0 shadow-[0_0_8px_rgba(34,211,238,0.8)]"></div>

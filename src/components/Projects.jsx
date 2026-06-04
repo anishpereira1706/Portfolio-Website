@@ -79,7 +79,7 @@ const Projects = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-24"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 font-outfit tracking-tight">Featured Projects</h2>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 font-heading tracking-tight">Featured Projects</h2>
           <div className="w-24 h-1.5 bg-cyan-500 mx-auto rounded-full shadow-[0_0_15px_rgba(34,211,238,0.6)]"></div>
         </motion.div>
 
@@ -116,7 +116,7 @@ const Projects = () => {
                 {/* Content Section */}
                 <div className="w-full lg:w-[45%] p-8 sm:p-10 lg:p-12 flex flex-col justify-center relative z-20">
                   <div className="flex justify-between items-start mb-6">
-                    <h3 className="text-3xl lg:text-4xl font-extrabold text-white font-outfit group-hover:text-cyan-400 transition-colors duration-300 tracking-tight">
+                    <h3 className="text-3xl lg:text-4xl font-extrabold text-white font-heading group-hover:text-cyan-400 transition-colors duration-300 tracking-tight">
                       {project.title}
                     </h3>
                     <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-cyan-400 hover:scale-110 transition-all duration-300 bg-zinc-950/50 p-3 rounded-full border border-white/5 hover:border-cyan-500/40 hover:bg-cyan-500/10 hover:shadow-[0_0_15px_rgba(34,211,238,0.2)] ml-4 shrink-0">

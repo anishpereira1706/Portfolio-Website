@@ -54,7 +54,7 @@ const Skills = () => {
           transition={{ duration: 0.6 }}
           className="flex flex-col items-center text-center space-y-4 mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white font-outfit">Technical Skills</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white font-heading">Technical Skills</h2>
           <div className="w-20 h-1 bg-cyan-500 rounded-full shadow-[0_0_10px_rgba(34,211,238,0.5)]"></div>
           <p className="text-zinc-400 max-w-2xl text-lg mt-4">The tools and technologies I use to bring ideas to life.</p>
         </motion.div>
@@ -70,26 +70,29 @@ const Skills = () => {
             <motion.div
               key={skillGroup.category}
               variants={itemVariants}
-              whileHover={{ scale: 1.05, transition: { type: "spring", stiffness: 400, damping: 10 } }}
-              className="interactive glass p-6 sm:p-8 rounded-3xl border border-white/5 bg-zinc-900/40 hover:bg-zinc-900/60 transition-colors duration-300 hover:border-cyan-500/30 hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] group relative overflow-hidden"
+              whileHover={{ scale: 1.02, transition: { type: "spring", stiffness: 400, damping: 10 } }}
+              className="interactive glass p-6 sm:p-8 rounded-[2rem] border border-white/5 bg-gradient-to-br from-zinc-900/90 to-zinc-950/90 backdrop-blur-xl hover:from-zinc-900/100 hover:to-zinc-900/90 transition-all duration-500 hover:border-cyan-500/30 hover:shadow-[0_0_50px_rgba(34,211,238,0.1)] group relative overflow-hidden flex flex-col"
             >
-              {/* Subtle inner top glow on hover */}
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500/0 to-transparent group-hover:via-cyan-500/50 transition-all duration-500"></div>
+              {/* Permanent subtle top border that brightens on hover */}
+              <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent group-hover:via-cyan-400 transition-all duration-700"></div>
 
-              <div className="flex items-center gap-4 mb-6">
-                <div className="flex items-center justify-center w-12 h-12 rounded-2xl bg-white/5 text-zinc-400 group-hover:bg-cyan-500/20 group-hover:text-cyan-400 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 shrink-0">
+              {/* Subtle background glow that appears on hover */}
+              <div className="absolute -inset-24 bg-gradient-to-br from-cyan-500/0 via-cyan-500/5 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-2xl z-0 pointer-events-none"></div>
+
+              <div className="flex items-center gap-4 mb-8 relative z-10">
+                <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-blue-500/5 border border-cyan-500/20 text-cyan-400 group-hover:from-cyan-500/20 group-hover:to-blue-500/10 group-hover:border-cyan-500/40 group-hover:text-cyan-300 transition-all duration-500 group-hover:scale-110 group-hover:-rotate-3 shadow-[0_0_15px_rgba(34,211,238,0.05)] shrink-0">
                   {skillGroup.icon}
                 </div>
-                <h3 className="text-xl font-bold text-white font-outfit group-hover:text-cyan-400 transition-colors">
+                <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-zinc-200 to-zinc-400 font-heading group-hover:from-cyan-400 group-hover:to-blue-500 transition-all duration-500">
                   {skillGroup.category}
                 </h3>
               </div>
 
-              <div className="flex flex-wrap gap-2.5">
+              <div className="flex flex-wrap gap-3 relative z-10 flex-grow content-start">
                 {skillGroup.items.map((item) => (
                   <span 
                     key={item} 
-                    className="px-4 py-2 bg-zinc-950/50 border border-white/5 rounded-xl text-sm font-medium text-zinc-400 transition-all duration-300 group-hover:border-cyan-500/20 group-hover:text-cyan-200 group-hover:bg-cyan-500/10 group-hover:shadow-[0_0_15px_rgba(34,211,238,0.1)]"
+                    className="px-4 py-2 bg-zinc-950/80 border border-white/5 rounded-xl text-sm font-semibold text-zinc-300 shadow-sm transition-all duration-300 hover:border-cyan-500/50 hover:text-cyan-300 hover:bg-cyan-500/20 hover:shadow-[0_0_20px_rgba(34,211,238,0.2)] hover:-translate-y-1 cursor-default"
                   >
                     {item}
                   </span>

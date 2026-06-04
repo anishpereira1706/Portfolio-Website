@@ -32,12 +32,12 @@ const Navbar = () => {
 
   return (
     <header className={clsx(
-      'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-      isScrolled ? 'bg-zinc-950/80 backdrop-blur-md border-b border-white/10 py-3' : 'bg-transparent py-5'
+      'fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b',
+      isScrolled ? 'bg-zinc-950/80 backdrop-blur-md border-white/10 py-4' : 'bg-transparent border-transparent py-4'
     )}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          <a href="#" className="text-xl font-bold tracking-tight text-white flex items-center gap-2 group font-outfit">
+          <a href="#" className="text-xl font-bold tracking-tight text-white flex items-center gap-2 group font-heading">
             <span>anish</span>
             <span className="w-2 h-2 rounded-full bg-cyan-500 shadow-[0_0_8px_rgba(34,211,238,0.8)] transition-transform duration-300 group-hover:scale-150"></span>
           </a>
@@ -60,12 +60,26 @@ const Navbar = () => {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Animated Mobile Menu Button */}
           <button 
-            className="md:hidden p-2 text-zinc-400 hover:text-white"
+            className="md:hidden relative w-10 h-10 flex flex-col justify-center items-center gap-1.5 text-zinc-300 hover:text-cyan-400 transition-colors z-50"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            <motion.span 
+              animate={isMobileMenuOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }} 
+              transition={{ type: "spring", stiffness: 260, damping: 20 }}
+              className="w-6 h-0.5 bg-current block rounded-full"
+            />
+            <motion.span 
+              animate={isMobileMenuOpen ? { opacity: 0, x: -10 } : { opacity: 1, x: 0 }} 
+              transition={{ duration: 0.2 }}
+              className="w-6 h-0.5 bg-current block rounded-full"
+            />
+            <motion.span 
+              animate={isMobileMenuOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }} 
+              transition={{ type: "spring", stiffness: 260, damping: 20 }}
+              className="w-6 h-0.5 bg-current block rounded-full"
+            />
           </button>
         </div>
       </div>
