@@ -79,7 +79,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="w-full py-24 sm:py-32 relative overflow-hidden">
-      <div className="absolute left-1/2 bottom-0 -translate-x-1/2 translate-y-1/2 w-[800px] h-[800px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+      <div className="absolute left-1/2 bottom-0 -translate-x-1/2 translate-y-1/2 w-200 h-200 bg-blue-600/10 rounded-full blur-[120px] pointer-events-none"></div>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div 
@@ -89,7 +89,7 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="flex flex-col items-center text-center space-y-4 mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 font-heading">Get In Touch</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-blue-500 font-heading">Get In Touch</h2>
           <div className="w-20 h-1 bg-cyan-500 rounded-full shadow-[0_0_10px_rgba(34,211,238,0.5)]"></div>
           <p className="text-zinc-400 max-w-2xl text-lg mt-4">I'm always open to new opportunities and interesting projects.</p>
         </motion.div>
@@ -103,7 +103,7 @@ const Contact = () => {
             className="space-y-8 lg:py-8"
           >
             <div>
-              <h3 className="text-3xl font-bold text-white mb-6 font-heading leading-tight">Let's talk about your <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">next project.</span></h3>
+              <h3 className="text-3xl font-bold text-white mb-6 font-heading leading-tight">Let's talk about your <br/><span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-blue-500">next project.</span></h3>
               <p className="text-zinc-400 mb-8 text-lg">
                 Whether you have a question, an opportunity, or just want to say hi, I'll try my best to get back to you!
               </p>
@@ -111,30 +111,30 @@ const Contact = () => {
 
             <div className="space-y-4">
               <a href="mailto:anishpereira1706@gmail.com" className="interactive flex items-center gap-4 sm:gap-5 text-zinc-300 transition-all duration-300 p-3 sm:p-4 bg-zinc-900/80 backdrop-blur-xl border border-white/5 rounded-2xl group hover:bg-zinc-900/90 hover:border-cyan-500/30 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent group-hover:via-cyan-400 transition-all duration-700"></div>
-                <div className="absolute -inset-24 bg-gradient-to-br from-cyan-500/0 via-cyan-500/5 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl z-0 pointer-events-none"></div>
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br from-cyan-500/10 to-blue-500/5 border border-cyan-500/20 shadow-[0_0_15px_rgba(34,211,238,0.1)] flex items-center justify-center group-hover:from-cyan-500/20 group-hover:to-blue-500/10 group-hover:border-cyan-500/40 group-hover:shadow-[0_0_20px_rgba(34,211,238,0.3)] transition-all z-10 shrink-0">
+                <div className="absolute top-0 left-0 w-full h-0.5 bg-linear-to-r from-transparent via-cyan-500/30 to-transparent group-hover:via-cyan-400 transition-all duration-700"></div>
+                <div className="absolute -inset-24 bg-linear-to-br from-cyan-500/0 via-cyan-500/5 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl z-0 pointer-events-none"></div>
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-linear-to-br from-cyan-500/10 to-blue-500/5 border border-cyan-500/20 shadow-[0_0_15px_rgba(34,211,238,0.1)] flex items-center justify-center group-hover:from-cyan-500/20 group-hover:to-blue-500/10 group-hover:border-cyan-500/40 group-hover:shadow-[0_0_20px_rgba(34,211,238,0.3)] transition-all z-10 shrink-0">
                   <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
                 </div>
-                <span className="font-medium text-base sm:text-lg group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-blue-400 transition-colors z-10 truncate">anishpereira1706@gmail.com</span>
+                <span className="font-medium text-base sm:text-lg group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-cyan-400 group-hover:to-blue-400 transition-colors z-10 truncate">anishpereira1706@gmail.com</span>
               </a>
               
               <a href="tel:+919632371841" className="interactive flex items-center gap-4 sm:gap-5 text-zinc-300 transition-all duration-300 p-3 sm:p-4 bg-zinc-900/80 backdrop-blur-xl border border-white/5 rounded-2xl group hover:bg-zinc-900/90 hover:border-cyan-500/30 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent group-hover:via-cyan-400 transition-all duration-700"></div>
-                <div className="absolute -inset-24 bg-gradient-to-br from-cyan-500/0 via-cyan-500/5 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl z-0 pointer-events-none"></div>
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br from-cyan-500/10 to-blue-500/5 border border-cyan-500/20 shadow-[0_0_15px_rgba(34,211,238,0.1)] flex items-center justify-center group-hover:from-cyan-500/20 group-hover:to-blue-500/10 group-hover:border-cyan-500/40 group-hover:shadow-[0_0_20px_rgba(34,211,238,0.3)] transition-all z-10 shrink-0">
+                <div className="absolute top-0 left-0 w-full h-0.5 bg-linear-to-r from-transparent via-cyan-500/30 to-transparent group-hover:via-cyan-400 transition-all duration-700"></div>
+                <div className="absolute -inset-24 bg-linear-to-br from-cyan-500/0 via-cyan-500/5 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl z-0 pointer-events-none"></div>
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-linear-to-br from-cyan-500/10 to-blue-500/5 border border-cyan-500/20 shadow-[0_0_15px_rgba(34,211,238,0.1)] flex items-center justify-center group-hover:from-cyan-500/20 group-hover:to-blue-500/10 group-hover:border-cyan-500/40 group-hover:shadow-[0_0_20px_rgba(34,211,238,0.3)] transition-all z-10 shrink-0">
                   <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
                 </div>
-                <span className="font-medium text-base sm:text-lg group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-blue-400 transition-colors z-10 truncate">+91 9632371841</span>
+                <span className="font-medium text-base sm:text-lg group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-cyan-400 group-hover:to-blue-400 transition-colors z-10 truncate">+91 9632371841</span>
               </a>
               
               <a href="https://github.com/anishpereira1706" target="_blank" rel="noopener noreferrer" className="interactive flex items-center gap-4 sm:gap-5 text-zinc-300 transition-all duration-300 p-3 sm:p-4 bg-zinc-900/80 backdrop-blur-xl border border-white/5 rounded-2xl group hover:bg-zinc-900/90 hover:border-cyan-500/30 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent group-hover:via-cyan-400 transition-all duration-700"></div>
-                <div className="absolute -inset-24 bg-gradient-to-br from-cyan-500/0 via-cyan-500/5 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl z-0 pointer-events-none"></div>
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br from-cyan-500/10 to-blue-500/5 border border-cyan-500/20 shadow-[0_0_15px_rgba(34,211,238,0.1)] flex items-center justify-center group-hover:from-cyan-500/20 group-hover:to-blue-500/10 group-hover:border-cyan-500/40 group-hover:shadow-[0_0_20px_rgba(34,211,238,0.3)] transition-all z-10 shrink-0">
+                <div className="absolute top-0 left-0 w-full h-0.5 bg-linear-to-r from-transparent via-cyan-500/30 to-transparent group-hover:via-cyan-400 transition-all duration-700"></div>
+                <div className="absolute -inset-24 bg-linear-to-br from-cyan-500/0 via-cyan-500/5 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl z-0 pointer-events-none"></div>
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-linear-to-br from-cyan-500/10 to-blue-500/5 border border-cyan-500/20 shadow-[0_0_15px_rgba(34,211,238,0.1)] flex items-center justify-center group-hover:from-cyan-500/20 group-hover:to-blue-500/10 group-hover:border-cyan-500/40 group-hover:shadow-[0_0_20px_rgba(34,211,238,0.3)] transition-all z-10 shrink-0">
                   <Github className="w-5 h-5 sm:w-6 sm:h-6 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
                 </div>
-                <span className="font-medium text-base sm:text-lg group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-blue-400 transition-colors z-10 truncate">@anishpereira1706</span>
+                <span className="font-medium text-base sm:text-lg group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-cyan-400 group-hover:to-blue-400 transition-colors z-10 truncate">@anishpereira1706</span>
               </a>
             </div>
           </motion.div>
@@ -145,9 +145,9 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
           >
-            <form className="bg-gradient-to-br from-zinc-900/30 to-zinc-950/30 backdrop-blur-md border border-white/10 p-6 sm:p-10 rounded-3xl md:rounded-[2rem] space-y-6 shadow-2xl relative overflow-hidden group hover:from-zinc-900/40 hover:to-zinc-900/30 hover:border-cyan-500/30 transition-all duration-500 hover:shadow-[0_0_50px_rgba(34,211,238,0.1)] flex flex-col" onSubmit={handleSubmit}>
-              <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent group-hover:via-cyan-400 transition-all duration-700 z-30"></div>
-              <div className="absolute -inset-24 bg-gradient-to-br from-cyan-500/0 via-cyan-500/5 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-2xl z-0 pointer-events-none"></div>
+            <form className="bg-linear-to-br from-zinc-900/30 to-zinc-950/30 backdrop-blur-md border border-white/10 p-6 sm:p-10 rounded-3xl md:rounded-4xl space-y-6 shadow-2xl relative overflow-hidden group hover:from-zinc-900/40 hover:to-zinc-900/30 hover:border-cyan-500/30 transition-all duration-500 hover:shadow-[0_0_50px_rgba(34,211,238,0.1)] flex flex-col" onSubmit={handleSubmit}>
+              <div className="absolute top-0 left-0 w-full h-0.5 bg-linear-to-r from-transparent via-cyan-500/30 to-transparent group-hover:via-cyan-400 transition-all duration-700 z-30"></div>
+              <div className="absolute -inset-24 bg-linear-to-br from-cyan-500/0 via-cyan-500/5 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-2xl z-0 pointer-events-none"></div>
               
               <div className="relative z-10">
                 <label htmlFor="name" className="block text-sm font-semibold text-zinc-300 mb-2">Name</label>
@@ -214,7 +214,7 @@ const Contact = () => {
               <button 
                 type="submit"
                 disabled={status === 'submitting'}
-                className="interactive relative z-10 w-full flex items-center justify-center gap-3 bg-gradient-to-br from-cyan-500/10 to-blue-500/5 text-cyan-400 font-bold text-lg py-4 px-6 rounded-2xl shadow-[0_0_15px_rgba(34,211,238,0.1)] hover:shadow-[0_0_25px_rgba(34,211,238,0.3)] hover:bg-cyan-500/20 hover:text-cyan-300 disabled:opacity-50 hover:-translate-y-1 transition-all duration-300 border border-cyan-500/30 hover:border-cyan-500/50"
+                className="interactive relative z-10 w-full flex items-center justify-center gap-3 bg-linear-to-br from-cyan-500/10 to-blue-500/5 text-cyan-400 font-bold text-lg py-4 px-6 rounded-2xl shadow-[0_0_15px_rgba(34,211,238,0.1)] hover:shadow-[0_0_25px_rgba(34,211,238,0.3)] hover:bg-cyan-500/20 hover:text-cyan-300 disabled:opacity-50 hover:-translate-y-1 transition-all duration-300 border border-cyan-500/30 hover:border-cyan-500/50"
               >
                 {status === 'submitting' ? (
                   <>

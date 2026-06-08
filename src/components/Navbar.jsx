@@ -38,7 +38,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           <a href="#" className="text-xl font-bold tracking-tight text-white flex items-center group font-heading">
-            <span>anish<span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">.</span></span>
+            <span>anish<span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-blue-500">.</span></span>
           </a>
 
           {/* Desktop Nav */}
@@ -110,7 +110,7 @@ const Navbar = () => {
 
       {/* Scroll Progress Bar */}
       <motion.div
-        className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-cyan-400 to-blue-500 origin-left shadow-[0_0_10px_rgba(34,211,238,0.5)]"
+        className="absolute bottom-0 left-0 right-0 h-0.5 bg-linear-to-r from-cyan-400 to-blue-500 origin-left shadow-[0_0_10px_rgba(34,211,238,0.5)]"
         style={{ scaleX }}
       />
     </header>

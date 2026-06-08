@@ -35,7 +35,7 @@ const Hero = () => {
       {/* Interactive Background gradient blob */}
       <motion.div 
         style={{ x: backgroundX, y: backgroundY }}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-cyan-600/10 rounded-full blur-[120px] opacity-50 pointer-events-none z-0"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-200 bg-cyan-600/10 rounded-full blur-[120px] opacity-50 pointer-events-none z-0"
       ></motion.div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-16 w-full z-10">
@@ -53,9 +53,9 @@ const Hero = () => {
           </div>
           
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white font-heading leading-tight">
-            Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Anish</span>.
+            Hi, I'm <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-blue-500">Anish</span>.
             <br />
-            <span className="text-2xl sm:text-4xl lg:text-5xl text-zinc-300 font-semibold h-[40px] block mt-4">
+            <span className="text-2xl sm:text-4xl lg:text-5xl text-zinc-300 font-semibold h-10 block mt-4">
               <Typewriter
                 words={['Web Developer', 'AI/ML Enthusiast', 'Graphic Designer']}
                 loop={true}
@@ -99,7 +99,7 @@ const Hero = () => {
             <motion.div 
               animate={{ y: [-15, 15, -15] }}
               transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
-              className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[400px] lg:h-[400px] rounded-full p-[3px] group shadow-[0_0_40px_rgba(34,211,238,0.2)] hover:shadow-[0_0_80px_rgba(34,211,238,0.6)] transition-all duration-500 flex-none"
+              className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-100 lg:h-100 rounded-full p-0.75 group shadow-[0_0_40px_rgba(34,211,238,0.2)] hover:shadow-[0_0_80px_rgba(34,211,238,0.6)] transition-all duration-500 flex-none"
             >
               {/* Spinning gradient border simulating particles */}
               <motion.div 
@@ -109,17 +109,17 @@ const Hero = () => {
               />
               
               {/* Additional glow layer */}
-              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-500/20 to-blue-600/20 blur-xl group-hover:from-cyan-400/40 group-hover:to-blue-500/40 transition-colors duration-500"></div>
+              <div className="absolute inset-0 rounded-full bg-linear-to-tr from-cyan-500/20 to-blue-600/20 blur-xl group-hover:from-cyan-400/40 group-hover:to-blue-500/40 transition-colors duration-500"></div>
               
               {/* Inner Image Container */}
-              <div className="absolute inset-[4px] z-10 bg-zinc-900 rounded-full overflow-hidden border-2 border-zinc-950/50 group-hover:border-cyan-500/50 transition-colors duration-500">
+              <div className="absolute inset-1 z-10 bg-zinc-900 rounded-full overflow-hidden border-2 border-zinc-950/50 group-hover:border-cyan-500/50 transition-colors duration-500">
                 <img 
                   src="/anish.webp" 
                   alt="Anish Larson Pereira" 
                   decoding="async"
                   className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/60 via-transparent to-transparent opacity-60 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-700"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-zinc-900/60 via-transparent to-transparent opacity-60 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-700"></div>
               </div>
             </motion.div>
           </motion.div>

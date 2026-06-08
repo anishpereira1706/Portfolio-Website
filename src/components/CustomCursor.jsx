@@ -54,11 +54,11 @@ const CustomCursor = () => {
   }, [mouseX, mouseY]);
 
   return (
-    <div className="pointer-events-none fixed inset-0 z-[100] hidden md:block overflow-hidden mix-blend-screen">
+    <div className="pointer-events-none fixed inset-0 z-100 hidden md:block overflow-hidden mix-blend-screen">
       
       {/* Slow, large liquid/smoky blob */}
       <motion.div
-        className="absolute top-0 left-0 w-40 h-40 bg-blue-600/20 rounded-full blur-[40px]"
+        className="absolute top-0 left-0 w-40 h-40 bg-blue-600/20 rounded-full blur-2xl"
         style={{
           x: smokeSlowX,
           y: smokeSlowY,
@@ -90,7 +90,7 @@ const CustomCursor = () => {
 
       {/* Precise inner ring instead of white dot */}
       <motion.div
-        className="absolute top-0 left-0 w-5 h-5 border-[2px] border-cyan-400 rounded-full shadow-[0_0_10px_rgba(34,211,238,0.5)]"
+        className="absolute top-0 left-0 w-5 h-5 border-2 border-cyan-400 rounded-full shadow-[0_0_10px_rgba(34,211,238,0.5)]"
         style={{
           x: dotX,
           y: dotY,
