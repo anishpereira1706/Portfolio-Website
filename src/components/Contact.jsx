@@ -7,13 +7,44 @@ const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState('idle'); // 'idle', 'submitting', 'success', 'error'
   const [errorMessage, setErrorMessage] = useState('');
+  const [validationErrors, setValidationErrors] = useState({});
+
+  const validateForm = () => {
+    const errors = {};
+    if (!formData.name.trim()) {
+      errors.name = 'Name is required';
+    } else if (formData.name.length < 2) {
+      errors.name = 'Name must be at least 2 characters';
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!formData.email.trim()) {
+      errors.email = 'Email is required';
+    } else if (!emailRegex.test(formData.email)) {
+      errors.email = 'Please enter a valid email address';
+    }
+
+    if (!formData.message.trim()) {
+      errors.message = 'Message is required';
+    } else if (formData.message.length < 10) {
+      errors.message = 'Message must be at least 10 characters';
+    }
+
+    setValidationErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
+    if (validationErrors[e.target.id]) {
+      setValidationErrors({ ...validationErrors, [e.target.id]: null });
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!validateForm()) return;
+
     setStatus('submitting');
     setErrorMessage('');
 
@@ -35,7 +66,6 @@ const Contact = () => {
       if (response.status === 200) {
         setStatus('success');
         setFormData({ name: '', email: '', message: '' });
-        // Reset success message after 5 seconds
         setTimeout(() => setStatus('idle'), 5000);
       } else {
         setStatus('error');
@@ -49,7 +79,6 @@ const Contact = () => {
 
   return (
     <section id="contact" className="w-full py-24 sm:py-32 relative overflow-hidden">
-      {/* Decorative gradient */}
       <div className="absolute left-1/2 bottom-0 -translate-x-1/2 translate-y-1/2 w-[800px] h-[800px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none"></div>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -66,7 +95,6 @@ const Contact = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-          {/* Contact Info */}
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -111,18 +139,14 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          {/* Contact Form */}
           <motion.div 
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
           >
-            <form className="bg-gradient-to-br from-zinc-900/90 to-zinc-950/90 backdrop-blur-xl border border-white/5 p-6 sm:p-10 rounded-3xl md:rounded-[2rem] space-y-6 shadow-2xl relative overflow-hidden group hover:from-zinc-900/100 hover:to-zinc-900/90 hover:border-cyan-500/30 transition-all duration-500 hover:shadow-[0_0_50px_rgba(34,211,238,0.1)] flex flex-col" onSubmit={handleSubmit}>
-              {/* Permanent subtle top border that brightens on hover */}
+            <form className="bg-gradient-to-br from-zinc-900/30 to-zinc-950/30 backdrop-blur-md border border-white/10 p-6 sm:p-10 rounded-3xl md:rounded-[2rem] space-y-6 shadow-2xl relative overflow-hidden group hover:from-zinc-900/40 hover:to-zinc-900/30 hover:border-cyan-500/30 transition-all duration-500 hover:shadow-[0_0_50px_rgba(34,211,238,0.1)] flex flex-col" onSubmit={handleSubmit}>
               <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent group-hover:via-cyan-400 transition-all duration-700 z-30"></div>
-              
-              {/* Subtle background glow */}
               <div className="absolute -inset-24 bg-gradient-to-br from-cyan-500/0 via-cyan-500/5 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-2xl z-0 pointer-events-none"></div>
               
               <div className="relative z-10">
@@ -134,9 +158,11 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   disabled={status === 'submitting'}
-                  className="w-full bg-zinc-950/80 border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-cyan-500/50 focus:bg-cyan-950/20 transition-all duration-300 disabled:opacity-50 placeholder-zinc-600 focus:shadow-[0_0_20px_rgba(34,211,238,0.1)]"
-                  placeholder="John Doe"
+                  className={`w-full bg-zinc-950/40 backdrop-blur-sm border ${validationErrors.name ? 'border-red-500/50 focus:border-red-500/50 focus:shadow-[0_0_20px_rgba(239,68,68,0.1)]' : 'border-white/10 focus:border-cyan-500/50 focus:shadow-[0_0_20px_rgba(34,211,238,0.1)]'} rounded-2xl px-5 py-4 text-white focus:outline-none focus:bg-cyan-950/20 transition-all duration-300 disabled:opacity-50`}
                 />
+                {validationErrors.name && (
+                  <p className="text-red-400 text-xs mt-2 ml-1">{validationErrors.name}</p>
+                )}
               </div>
               <div className="relative z-10">
                 <label htmlFor="email" className="block text-sm font-semibold text-zinc-300 mb-2">Email</label>
@@ -147,9 +173,11 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   disabled={status === 'submitting'}
-                  className="w-full bg-zinc-950/80 border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-cyan-500/50 focus:bg-cyan-950/20 transition-all duration-300 disabled:opacity-50 placeholder-zinc-600 focus:shadow-[0_0_20px_rgba(34,211,238,0.1)]"
-                  placeholder="john@example.com"
+                  className={`w-full bg-zinc-950/40 backdrop-blur-sm border ${validationErrors.email ? 'border-red-500/50 focus:border-red-500/50 focus:shadow-[0_0_20px_rgba(239,68,68,0.1)]' : 'border-white/10 focus:border-cyan-500/50 focus:shadow-[0_0_20px_rgba(34,211,238,0.1)]'} rounded-2xl px-5 py-4 text-white focus:outline-none focus:bg-cyan-950/20 transition-all duration-300 disabled:opacity-50`}
                 />
+                {validationErrors.email && (
+                  <p className="text-red-400 text-xs mt-2 ml-1">{validationErrors.email}</p>
+                )}
               </div>
               <div className="relative z-10">
                 <label htmlFor="message" className="block text-sm font-semibold text-zinc-300 mb-2">Message</label>
@@ -160,12 +188,13 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   disabled={status === 'submitting'}
-                  className="w-full bg-zinc-950/80 border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-cyan-500/50 focus:bg-cyan-950/20 transition-all duration-300 resize-none disabled:opacity-50 placeholder-zinc-600 focus:shadow-[0_0_20px_rgba(34,211,238,0.1)]"
-                  placeholder="How can I help you?"
+                  className={`w-full bg-zinc-950/40 backdrop-blur-sm border ${validationErrors.message ? 'border-red-500/50 focus:border-red-500/50 focus:shadow-[0_0_20px_rgba(239,68,68,0.1)]' : 'border-white/10 focus:border-cyan-500/50 focus:shadow-[0_0_20px_rgba(34,211,238,0.1)]'} rounded-2xl px-5 py-4 text-white focus:outline-none focus:bg-cyan-950/20 transition-all duration-300 resize-none disabled:opacity-50`}
                 ></textarea>
+                {validationErrors.message && (
+                  <p className="text-red-400 text-xs mt-2 ml-1">{validationErrors.message}</p>
+                )}
               </div>
 
-              {/* Status Messages */}
               <div className="relative z-10">
                 {status === 'success' && (
                   <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="flex items-center gap-3 text-emerald-400 bg-emerald-400/10 p-4 rounded-2xl border border-emerald-400/20 backdrop-blur-md">

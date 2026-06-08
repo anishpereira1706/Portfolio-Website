@@ -71,7 +71,7 @@ const Experience = () => {
               {/* Card */}
               <motion.div 
                 whileHover={{ scale: 1.02, transition: { type: "spring", stiffness: 400, damping: 10 } }}
-                className="interactive w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-gradient-to-br from-zinc-900/90 to-zinc-950/90 backdrop-blur-xl border border-white/5 rounded-3xl md:rounded-[2rem] p-5 sm:p-6 md:p-8 hover:from-zinc-900/100 hover:to-zinc-900/90 hover:border-cyan-500/30 transition-all duration-500 hover:shadow-[0_0_50px_rgba(34,211,238,0.1)] relative shadow-lg overflow-hidden flex flex-col"
+                className="interactive w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-gradient-to-br from-zinc-900/30 to-zinc-950/30 backdrop-blur-md border border-white/10 rounded-3xl md:rounded-[2rem] p-5 sm:p-6 md:p-8 hover:from-zinc-900/40 hover:to-zinc-900/30 hover:border-cyan-500/30 transition-all duration-500 hover:shadow-[0_0_50px_rgba(34,211,238,0.1)] relative shadow-lg overflow-hidden flex flex-col"
               >
                 {/* Permanent subtle top border that brightens on hover */}
                 <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent group-hover:via-cyan-400 transition-all duration-700"></div>
@@ -81,7 +81,7 @@ const Experience = () => {
 
                 <div className="flex flex-col xl:flex-row xl:items-center justify-between mb-4 gap-3 relative z-10">
                   <h3 className="font-bold text-2xl text-transparent bg-clip-text bg-gradient-to-r from-zinc-200 to-zinc-400 font-heading group-hover:from-cyan-400 group-hover:to-blue-500 transition-all duration-500">{exp.role}</h3>
-                  <span className="text-xs font-semibold px-4 py-2 bg-zinc-950/80 text-zinc-300 border border-white/5 rounded-xl w-fit group-hover:bg-cyan-500/10 group-hover:text-cyan-300 group-hover:border-cyan-500/30 group-hover:shadow-[0_0_15px_rgba(34,211,238,0.1)] transition-all duration-300 shrink-0">
+                  <span className="text-xs font-semibold px-4 py-2 bg-zinc-950/40 backdrop-blur-sm text-zinc-300 border border-white/10 rounded-xl w-fit group-hover:bg-cyan-500/10 group-hover:text-cyan-300 group-hover:border-cyan-500/30 group-hover:shadow-[0_0_15px_rgba(34,211,238,0.1)] transition-all duration-300 shrink-0">
                     {exp.date}
                   </span>
                 </div>

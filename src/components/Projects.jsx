@@ -7,7 +7,7 @@ const projects = [
   {
     title: "AgroScan AI",
     description: "Smart Crop Disease Detection & Soil Analysis. AI + IoT based system using EfficientNetB0 and ESP32 sensors for crop disease prediction, soil analysis, and data management via a web interface with admin control.",
-    image: "/agroscanai.png",
+    image: "/agroscanai.webp",
     tags: [
       { name: "AI/ML", icon: <Cpu className="w-4 h-4" /> },
       { name: "IoT & ESP32", icon: <Cpu className="w-4 h-4" /> },
@@ -19,7 +19,7 @@ const projects = [
   {
     title: "PawConnect",
     description: "Pet Adoption & Rescue App. Built using Flutter for cross-platform app support and a custom PHP/MySQL backend.",
-    image: "/pawconnect.png",
+    image: "/pawconnect.webp",
     tags: [
       { name: "Flutter", icon: <Smartphone className="w-4 h-4" /> },
       { name: "Dart", icon: <Code2 className="w-4 h-4" /> },
@@ -32,7 +32,7 @@ const projects = [
   {
     title: "Schedula App",
     description: "A modern Flutter-based timetable management app with smart scheduling, offline support, and seamless export features.",
-    image: "/schedula.png",
+    image: "/schedula.webp",
     tags: [
       { name: "Flutter", icon: <Smartphone className="w-4 h-4" /> },
       { name: "Dart", icon: <Code2 className="w-4 h-4" /> },
@@ -43,7 +43,7 @@ const projects = [
   {
     title: "E-Pharmacy Store",
     description: "A comprehensive web-based pharmacy management system allowing users to buy medicines online and admins to manage inventory.",
-    image: "/epharmacy.png",
+    image: "/epharmacy.webp",
     tags: [
       { name: "HTML/CSS", icon: <Layout className="w-4 h-4" /> },
       { name: "JavaScript", icon: <Code2 className="w-4 h-4" /> },
@@ -111,6 +111,8 @@ const Projects = () => {
                   <img 
                     src={project.image} 
                     alt={project.title} 
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover object-top opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                   />
                   {/* Gradient blend for image edge on large screens */}

@@ -92,29 +92,36 @@ const Hero = () => {
           className="flex-1 flex justify-center md:justify-end w-full max-w-md md:max-w-none relative mt-10 md:mt-0"
         >
           <motion.div 
-            animate={{ y: [-10, 10, -10] }}
-            transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-            className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[400px] lg:h-[400px] rounded-full p-[3px] group shadow-[0_0_40px_rgba(34,211,238,0.2)] flex-none"
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            className="interactive"
           >
-            {/* Spinning gradient border simulating particles */}
             <motion.div 
-              animate={{ rotate: 360 }}
-              transition={{ repeat: Infinity, duration: 4, ease: "linear" }}
-              className="absolute inset-0 rounded-full bg-[conic-gradient(from_0deg,transparent_0_300deg,#22d3ee_360deg)] opacity-70 group-hover:opacity-100 transition-opacity"
-            />
-            
-            {/* Additional glow layer */}
-            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-500/20 to-blue-600/20 blur-xl"></div>
-            
-            {/* Inner Image Container */}
-            <div className="absolute inset-[4px] z-10 bg-zinc-900 rounded-full overflow-hidden border-2 border-zinc-950/50">
-              <img 
-                src="/anish.png" 
-                alt="Anish Larson Pereira" 
-                className="w-full h-full object-cover object-top opacity-90 transition-all duration-700"
+              animate={{ y: [-15, 15, -15] }}
+              transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
+              className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[400px] lg:h-[400px] rounded-full p-[3px] group shadow-[0_0_40px_rgba(34,211,238,0.2)] hover:shadow-[0_0_80px_rgba(34,211,238,0.6)] transition-all duration-500 flex-none"
+            >
+              {/* Spinning gradient border simulating particles */}
+              <motion.div 
+                animate={{ rotate: 360 }}
+                transition={{ repeat: Infinity, duration: 4, ease: "linear" }}
+                className="absolute inset-0 rounded-full bg-[conic-gradient(from_0deg,transparent_0_270deg,#22d3ee_360deg)] opacity-70 group-hover:opacity-100 transition-opacity duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/60 via-transparent to-transparent opacity-40 mix-blend-overlay"></div>
-            </div>
+              
+              {/* Additional glow layer */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-500/20 to-blue-600/20 blur-xl group-hover:from-cyan-400/40 group-hover:to-blue-500/40 transition-colors duration-500"></div>
+              
+              {/* Inner Image Container */}
+              <div className="absolute inset-[4px] z-10 bg-zinc-900 rounded-full overflow-hidden border-2 border-zinc-950/50 group-hover:border-cyan-500/50 transition-colors duration-500">
+                <img 
+                  src="/anish.webp" 
+                  alt="Anish Larson Pereira" 
+                  decoding="async"
+                  className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/60 via-transparent to-transparent opacity-60 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-700"></div>
+              </div>
+            </motion.div>
           </motion.div>
         </motion.div>
         
