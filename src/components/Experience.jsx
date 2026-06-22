@@ -4,6 +4,12 @@ import { Briefcase } from 'lucide-react';
 
 const experiences = [
   {
+    role: "Software Developer Intern",
+    company: "Tech Harmonics",
+    date: "May 2026 - Present",
+    description: "Assisting in software development, debugging, and building new features while gaining hands-on experience with modern development workflows."
+  },
+  {
     role: "Flutter Developer Intern",
     company: "Accolade Tech Solutions Pvt. Ltd.",
     date: "May - July 2025",
@@ -39,7 +45,7 @@ const Experience = () => {
       <div className="absolute right-0 top-1/2 translate-x-1/3 -translate-y-1/2 w-125 h-125 bg-blue-600/5 rounded-full blur-[100px] pointer-events-none z-0"></div>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -50,7 +56,7 @@ const Experience = () => {
           <div className="w-20 h-1 bg-cyan-500 rounded-full shadow-[0_0_10px_rgba(34,211,238,0.5)]"></div>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -58,7 +64,7 @@ const Experience = () => {
           className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-linear-to-b before:from-cyan-500/50 before:via-blue-500/20 before:to-transparent"
         >
           {experiences.map((exp, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               variants={itemVariants}
               className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active"
@@ -67,15 +73,15 @@ const Experience = () => {
               <div className="flex items-center justify-center w-12 h-12 rounded-full border border-cyan-500/20 bg-linear-to-br from-cyan-500/10 to-blue-500/5 shadow-[0_0_15px_rgba(34,211,238,0.1)] shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 text-cyan-400 group-hover:scale-110 group-hover:from-cyan-500/20 group-hover:to-blue-500/10 group-hover:border-cyan-500/40 group-hover:shadow-[0_0_20px_rgba(34,211,238,0.3)] group-hover:text-cyan-300 transition-all duration-500">
                 <Briefcase className="w-5 h-5" />
               </div>
-              
+
               {/* Card */}
-              <motion.div 
+              <motion.div
                 whileHover={{ scale: 1.02, transition: { type: "spring", stiffness: 400, damping: 10 } }}
                 className="interactive w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-linear-to-br from-zinc-900/30 to-zinc-950/30 backdrop-blur-md border border-white/10 rounded-3xl md:rounded-4xl p-5 sm:p-6 md:p-8 hover:from-zinc-900/40 hover:to-zinc-900/30 hover:border-cyan-500/30 transition-all duration-500 hover:shadow-[0_0_50px_rgba(34,211,238,0.1)] relative shadow-lg overflow-hidden flex flex-col"
               >
                 {/* Permanent subtle top border that brightens on hover */}
                 <div className="absolute top-0 left-0 w-full h-0.5 bg-linear-to-r from-transparent via-cyan-500/30 to-transparent group-hover:via-cyan-400 transition-all duration-700"></div>
-                
+
                 {/* Subtle background glow that appears on hover */}
                 <div className="absolute -inset-24 bg-linear-to-br from-cyan-500/0 via-cyan-500/5 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-2xl z-0 pointer-events-none"></div>
 

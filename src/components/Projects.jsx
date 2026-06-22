@@ -14,11 +14,12 @@ const projects = [
       { name: "Python", icon: <FileJson className="w-4 h-4" /> },
       { name: "Web App", icon: <Globe className="w-4 h-4" /> }
     ],
-    github: "https://github.com/anishpereira1706"
+    github: "https://github.com/anishpereira1706/AgroScan-AI"
   },
   {
     title: "PawConnect",
     description: "Pet Adoption & Rescue App. Built using Flutter for cross-platform app support and a custom PHP/MySQL backend.",
+    // description: "Dog adoption and rescue app. Developed using flutter. php for backend with admin panel for easy management.",
     image: "/pawconnect.webp",
     tags: [
       { name: "Flutter", icon: <Smartphone className="w-4 h-4" /> },
@@ -27,7 +28,7 @@ const projects = [
       { name: "MySQL", icon: <Database className="w-4 h-4" /> },
       { name: "Mobile App", icon: <Smartphone className="w-4 h-4" /> }
     ],
-    github: "https://github.com/anishpereira1706"
+    github: "https://github.com/anishpereira1706/PawConnect"
   },
   {
     title: "Schedula App",

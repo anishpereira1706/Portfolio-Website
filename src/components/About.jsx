@@ -16,7 +16,7 @@ const About = () => {
           className="space-y-10"
         >
           <div className="flex flex-col items-center text-center space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-linear-to-rrom-cyan-400 to-blue-500 font-heading">About Me</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 font-heading">About Me</h2>
             <div className="w-20 h-1 bg-cyan-500 rounded-full shadow-[0_0_10px_rgba(34,211,238,0.5)]"></div>
           </div>
           
