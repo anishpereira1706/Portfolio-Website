@@ -9,7 +9,7 @@ const Footer = () => {
         </div>
         
         <p className="text-zinc-500 text-sm text-center md:text-left">
-          &copy; {new Date().getFullYear()} Anish Larson Pereira. All rights reserved.
+          &copy; {new Date().getFullYear()} Anish Pereira. All rights reserved.
         </p>
       </div>
     </footer>

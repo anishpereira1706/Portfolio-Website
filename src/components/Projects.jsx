@@ -5,6 +5,17 @@ import { GithubIcon as Github } from './GithubIcon';
 
 const projects = [
   {
+    title: "Church Website",
+    description: "Official website for Infant Mary Church. Built to provide parish members with access to mass timings, news & events, history, and community notifications. Features a clean, responsive layout. (Under Development)",
+    image: "/church.png",
+    tags: [
+      { name: "React", icon: <Code2 className="w-4 h-4" /> },
+      { name: "Tailwind CSS", icon: <Layout className="w-4 h-4" /> },
+      { name: "Web App", icon: <Globe className="w-4 h-4" /> }
+    ],
+    github: "https://github.com/anishpereira1706"
+  },
+  {
     title: "AgroScan AI",
     description: "Smart Crop Disease Detection & Soil Analysis. AI + IoT based system using EfficientNetB0 and ESP32 sensors for crop disease prediction, soil analysis, and data management via a web interface with admin control.",
     image: "/agroscanai.webp",
@@ -93,6 +104,7 @@ const Projects = () => {
         >
           {projects.map((project, index) => {
             const isEven = index % 2 === 0;
+            const isChurch = project.title === "Church Website";
             return (
               <motion.div
                 key={index}
@@ -106,7 +118,7 @@ const Projects = () => {
                 <div className="absolute -inset-24 bg-linear-to-br from-cyan-500/0 via-cyan-500/5 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-2xl z-0 pointer-events-none"></div>
 
                 {/* Image Section */}
-                <div className="w-full lg:w-[55%] aspect-video sm:aspect-16/10 lg:aspect-auto lg:h-full relative overflow-hidden shrink-0 group-hover:scale-[1.02] transition-transform duration-700 z-10">
+                <div className={`w-full lg:w-[55%] ${isChurch ? 'aspect-16/10 sm:aspect-4/3' : 'aspect-video sm:aspect-16/10'} lg:aspect-auto lg:h-full relative overflow-hidden shrink-0 group-hover:scale-[1.02] transition-transform duration-700 z-10`}>
                   <div className="absolute inset-0 bg-linear-to-t from-zinc-950 via-transparent to-transparent opacity-80 z-10 lg:hidden"></div>
                   <div className={`absolute inset-0 bg-linear-to-r ${isEven ? 'from-zinc-950 via-zinc-950/20' : 'to-zinc-950 via-zinc-950/20'} to-transparent opacity-0 lg:opacity-100 z-10 hidden lg:block`}></div>
                   <img 

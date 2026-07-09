@@ -18,16 +18,16 @@ function App() {
         <ParticlesBackground />
         <CustomCursor />
         <Navbar />
-      <main className="flex flex-col items-center w-full">
-        <Hero />
-        <About />
-        <Skills />
-        <Experience />
-        <Projects />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+        <main className="flex flex-col items-center w-full">
+          <Hero />
+          <About />
+          <Skills />
+          <Experience />
+          <Projects />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
     </SmoothScroll>
   )
 }

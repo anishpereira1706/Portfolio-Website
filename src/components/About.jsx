@@ -27,12 +27,8 @@ const About = () => {
             {/* Subtle background glow that appears on hover */}
             <div className="absolute -inset-24 bg-linear-to-br from-cyan-500/0 via-cyan-500/5 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-2xl z-0 pointer-events-none"></div>
             
-            <p className="relative z-20">
-              I am a tech enthusiast with a strong interest in computer applications and problem-solving. 
-              I strive to bring creativity, adaptability, and attention to detail to my work, ensuring meaningful outcomes.
-            </p>
-            <p className="relative z-20">
-              I look forward to working with innovative teams and taking on challenges that help me grow and contribute effectively.
+            <p className="relative z-20 text-zinc-300 text-base sm:text-lg text-left sm:text-justify">
+              I am a Software Developer specializing in building clean, functional, and responsive web applications. With a solid foundation in computer applications, I focus on writing clean code, solving real-world development challenges, and collaborating with teams to build scalable digital solutions.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-10 mt-8 border-t border-white/5 relative z-20">

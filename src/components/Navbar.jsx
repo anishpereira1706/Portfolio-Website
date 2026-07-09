@@ -55,7 +55,7 @@ const Navbar = () => {
               <Github className="w-5 h-5" />
             </a>
             <a href="#contact" className="px-5 py-2.5 rounded-full bg-cyan-400 text-zinc-950 text-sm font-bold hover:bg-cyan-300 hover:scale-105 transition-all duration-300 shadow-[0_0_15px_rgba(34,211,238,0.3)]">
-              Let's Talk
+              Let's Connect
             </a>
           </div>
 

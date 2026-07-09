@@ -5,10 +5,10 @@ import * as random from 'maath/random/dist/maath-random.esm';
 
 const StarBackground = (props) => {
   const ref = useRef();
-  
+
   // 6000 float values represent 2000 points (x, y, z)
   // Float32Array creates the precise buffer needed for WebGL
-  const [sphere] = useState(() => 
+  const [sphere] = useState(() =>
     random.inSphere(new Float32Array(6000), { radius: 1.2 })
   );
 
