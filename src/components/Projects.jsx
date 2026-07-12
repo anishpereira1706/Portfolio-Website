@@ -13,7 +13,8 @@ const projects = [
       { name: "Tailwind CSS", icon: <Layout className="w-4 h-4" /> },
       { name: "Web App", icon: <Globe className="w-4 h-4" /> }
     ],
-    github: "https://github.com/anishpereira1706"
+    github: "https://github.com/anishpereira1706",
+    demo: "https://katipallachurch.vercel.app"
   },
   {
     title: "AgroScan AI",
@@ -30,7 +31,6 @@ const projects = [
   {
     title: "PawConnect",
     description: "Pet Adoption & Rescue App. Built using Flutter for cross-platform app support and a custom PHP/MySQL backend.",
-    // description: "Dog adoption and rescue app. Developed using flutter. php for backend with admin panel for easy management.",
     image: "/pawconnect.webp",
     tags: [
       { name: "Flutter", icon: <Smartphone className="w-4 h-4" /> },
@@ -118,18 +118,40 @@ const Projects = () => {
                 <div className="absolute -inset-24 bg-linear-to-br from-cyan-500/0 via-cyan-500/5 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-2xl z-0 pointer-events-none"></div>
 
                 {/* Image Section */}
-                <div className={`w-full lg:w-[55%] ${isChurch ? 'aspect-16/10 sm:aspect-4/3' : 'aspect-video sm:aspect-16/10'} lg:aspect-auto lg:h-full relative overflow-hidden shrink-0 group-hover:scale-[1.02] transition-transform duration-700 z-10`}>
-                  <div className="absolute inset-0 bg-linear-to-t from-zinc-950 via-transparent to-transparent opacity-80 z-10 lg:hidden"></div>
-                  <div className={`absolute inset-0 bg-linear-to-r ${isEven ? 'from-zinc-950 via-zinc-950/20' : 'to-zinc-950 via-zinc-950/20'} to-transparent opacity-0 lg:opacity-100 z-10 hidden lg:block`}></div>
-                  <img 
-                    src={project.image} 
-                    alt={project.title} 
-                    loading="lazy"
-                    decoding="async"
-                    className="w-full h-full object-cover object-top opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
-                  />
-                  {/* Gradient blend for image edge on large screens */}
-                  <div className={`hidden lg:block absolute inset-y-0 w-1/4 from-zinc-900/90 to-transparent z-20 ${isEven ? 'right-0 bg-linear-to-l' : 'left-0 bg-linear-to-r'}`}></div>
+                <div className="w-full lg:w-[55%] flex flex-col shrink-0 relative z-10 border-b lg:border-b-0 border-white/5 bg-zinc-950/20">
+                  <div className={`w-full ${isChurch ? 'aspect-16/10 sm:aspect-4/3' : 'aspect-video sm:aspect-16/10'} lg:aspect-auto lg:h-[80%] relative overflow-hidden group-hover:scale-[1.01] transition-transform duration-700`}>
+                    <div className="absolute inset-0 bg-linear-to-t from-zinc-950 via-transparent to-transparent opacity-80 z-10 lg:hidden"></div>
+                    <img 
+                      src={project.image} 
+                      alt={project.title} 
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover object-top opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                    />
+                  </div>
+                  
+                  {/* Live Preview Button Container below the image */}
+                  <div className="py-4 lg:py-0 flex-1 flex justify-center items-center bg-zinc-950/40 z-20 border-t border-white/5">
+                    {project.demo ? (
+                      <a 
+                        href={project.demo} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="flex items-center gap-2 px-6 py-3 rounded-full bg-cyan-400 text-zinc-950 text-sm font-bold hover:bg-cyan-300 hover:scale-105 transition-all duration-300 shadow-[0_0_15px_rgba(34,211,238,0.3)]"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Live Preview
+                      </a>
+                    ) : (
+                      <button 
+                        disabled 
+                        className="flex items-center gap-2 px-6 py-3 rounded-full bg-zinc-800/40 text-zinc-600 text-sm font-bold border border-white/5 opacity-55 cursor-not-allowed"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Live Preview
+                      </button>
+                    )}
+                  </div>
                 </div>
 
                 {/* Content Section */}
